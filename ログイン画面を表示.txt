@@ -1,0 +1,31 @@
+ディレクトリーの階層
+⓵src/main/java/con.example.demoにLoginControllerを作成する
+
+
+⓵ー1 LoginControllerの内容
+
+package com.example.demo;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@Controller
+public class LoginController {
+	@GetMapping("/login")
+	//getメソッド
+	public String getLogin(Model model) {
+		//login.htmlに遷移
+		return "login.html"
+	}
+	//POSTメソッド
+	@PostMapping("/login")
+	public String postLogin(Model model) {
+		return "login.html"
+	}
+}
+
+※この時点ではコントローラーを作成しただけなのでブラウザに表示できない。
+
+⓶returnのlogin.htmlを作成する。
