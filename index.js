@@ -16,5 +16,14 @@ function add(){
   li.classList.add("list-group-item");
   ul.appendChild(li);
   input.value = "";
+  seveData();
   }
+}
+
+function seveData(){
+  const lists = document.querySelector("li");
+  let todos =[];
+  lists.array.forEach(list => {
+    todos.push(list.innerText)
+  });
 }
