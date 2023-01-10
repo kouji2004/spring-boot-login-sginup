@@ -16,8 +16,12 @@ form.addEventListener("submit",function(event){
   add();
 });
 
-function add(){
+function add(todo){
   let todoText = input.value
+if(todo){
+  todoText = todo;
+}
+
   if(todoText){
   const li = document.createElement("li");
   li.innerText = todoText;
@@ -31,7 +35,7 @@ function add(){
 function seveData(){
   const lists = document.querySelector("li");
   let todos =[];
-  lists.array.forEach(list => {
+  lists.forEach(list => {
     todos.push(list.innerText)
   });
   localStorage.setItem("todos", JSON.stringify(todos));
