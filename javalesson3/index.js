@@ -1,3 +1,3 @@
 document.getElementById("btn1").addEventListener("click",()=>{
-  window.alert("10時");
+  document.getElementById("message").innerHTML = "10時ですs";
 });
