@@ -10,7 +10,12 @@
   
   <script>
     let now = new Date(); //日付けと時刻を表示
-    document.write(now.getSeconds());
+    let firstday = new Date()
+    document.write(now.getHours()); //時間を取得
+    document.write(now.getMinutes());//分を取得
+    document.write(now.getSeconds());//秒を取得する
+
+
   </script>
 </body>
 </html>
